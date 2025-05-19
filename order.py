@@ -6,6 +6,9 @@ class Order:
         self.coffee = coffee
         self.price = price
 
+    def __repr__(self):
+        return f"Order(customer={self.customer.name}, coffee={self.coffee.name}, price={self.price})"    
+
     @property
     def customer(self):
         return self._customer

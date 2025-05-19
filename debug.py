@@ -24,3 +24,10 @@ customer5.create_order(coffee5, 7.9)
 
 for order in customer5.orders():
     print(f"Customer: {order.customer.name}, Coffee: {order.coffee.name}, Price: {order.price}")
+
+
+print(coffee1.orders())            
+print(coffee1.customers())          
+print(coffee1.num_orders())  
+print(coffee1.average_price())  
+print(coffee1.customers())    

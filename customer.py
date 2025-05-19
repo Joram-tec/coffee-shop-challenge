@@ -3,6 +3,9 @@ class Customer:
         self.name = name
         self._orders = []
 
+    def __repr__(self):
+        return f"Customer(name = '{self.name}')"    
+
     @property
     def name(self):
         return self._name
@@ -26,7 +29,8 @@ class Customer:
         order = Order(self, coffee, price)
         self._orders.append(order)
         coffee._orders.append(order)
-        return Order(self, coffee, price)
+        return order
+
 
     @classmethod
     def most_aficionado(cls, coffee):
